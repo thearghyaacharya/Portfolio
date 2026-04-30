@@ -57,3 +57,17 @@
     grid-template-columns: 1fr;
   }
 }
+
+
+.reveal {
+  opacity: 0;
+  transform: translateY(34px);
+  transition:
+    opacity 0.9s cubic-bezier(.2,.7,.2,1),
+    transform 0.9s cubic-bezier(.2,.7,.2,1);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
