@@ -511,3 +511,30 @@ h1 {
     font-size: 34px;
   }
 }
+
+.footer {
+  text-align: center;
+  padding: 60px 20px;
+  border-top: 1px solid #222;
+  margin-top: 80px;
+}
+
+.liferule img {
+  max-width: 220px;
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  opacity: 0.9;
+  transition: transform 0.4s ease;
+}
+
+.liferule img:hover {
+  transform: scale(1.05);
+}
+
+.liferule-text {
+  font-size: 16px;
+  color: #aaa;
+  font-style: italic;
+  letter-spacing: 0.5px;
+}
