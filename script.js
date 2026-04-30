@@ -1,19 +1,3 @@
-/* ===================================
-   ARGHYA ACHARYA PORTFOLIO
-   PREMIUM UI INTERACTIONS
-=================================== */
-
-/*
-Smooth transitions and subtle fade effects improve perceived polish,
-especially in dark UI systems where abrupt changes feel harsh.
-Gentle transitions on text/background are a modern best practice. :contentReference[oaicite:0]{index=0}
-*/
-
-
-/* ===================================
-   SCROLL REVEAL ANIMATION
-=================================== */
-
 const revealElements = document.querySelectorAll(
   ".section, .case-study, .metric-card, .philosophy-card, .limitless-banner"
 );
