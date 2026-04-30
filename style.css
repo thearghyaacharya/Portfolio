@@ -1,3 +1,129 @@
+/* ===================================
+   BRUTAL PREMIUM MOTION
+=================================== */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(34px);
+  transition:
+    opacity 0.9s cubic-bezier(.2,.7,.2,1),
+    transform 0.9s cubic-bezier(.2,.7,.2,1);
+  will-change: opacity, transform;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* Hero entrance */
+
+.hero .eyebrow,
+.hero h1,
+.hero .hero-sub,
+.hero .hero-quote,
+.hero .cta,
+.hero-img-wrap {
+  opacity: 0;
+  transform: translateY(28px);
+  animation: heroRise 0.9s cubic-bezier(.2,.7,.2,1) forwards;
+}
+
+.hero .eyebrow { animation-delay: 0.08s; }
+.hero h1 { animation-delay: 0.18s; }
+.hero .hero-sub { animation-delay: 0.30s; }
+.hero .hero-quote { animation-delay: 0.42s; }
+.hero .cta { animation-delay: 0.54s; }
+.hero-img-wrap { animation-delay: 0.38s; }
+
+@keyframes heroRise {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* Navbar after scroll */
+
+nav.nav-scrolled {
+  background: rgba(7, 7, 7, 0.97);
+  border-bottom: 1px solid rgba(201, 168, 93, 0.18);
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.28);
+}
+
+
+/* Active nav */
+
+.nav-links a.active-nav {
+  color: var(--gold);
+}
+
+
+/* Image motion */
+
+.case-hero-img,
+.img-strip img,
+.bl-grid img,
+.hero-img {
+  transition:
+    transform 0.7s cubic-bezier(.2,.7,.2,1),
+    filter 0.7s cubic-bezier(.2,.7,.2,1),
+    opacity 0.7s ease;
+}
+
+.case:hover .case-hero-img {
+  transform: scale(1.015);
+}
+
+.img-strip img:hover,
+.bl-grid img:hover {
+  transform: scale(1.025);
+  filter: brightness(1) saturate(1.02) contrast(1.04);
+}
+
+
+/* Button motion */
+
+.btn {
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.btn:hover {
+  box-shadow: 0 12px 30px rgba(201, 168, 93, 0.12);
+}
+
+
+/* Respect reduced motion preferences */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+
+  .reveal,
+  .hero .eyebrow,
+  .hero h1,
+  .hero .hero-sub,
+  .hero .hero-quote,
+  .hero .cta,
+  .hero-img-wrap {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+
 :root {
   --bg: #070707;
   --bg2: #0d0d0c;
